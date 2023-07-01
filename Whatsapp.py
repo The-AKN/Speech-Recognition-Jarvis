@@ -39,13 +39,13 @@ update = int((datetime.now()+timedelta(minutes = 2)).strftime("%M"))
 
 def sendMessage():
     speak("Who do you want to message")
-    a = int(input('''Yash - Press 1 to send message
-Gaurav - Press 2 to send message'''))
+    a = int(input('''#Enter your Friend or your name - Press 1 to send message
+#Enter your frind name  - Press 2 to send message''')) #Enter your friends name
     if a == 1:
         speak("Whats the message")
         message = str(input("Enter the message- "))
-        pywhatkit.sendwhatmsg("+919561721747",message,time_hour=strTime,time_min=update)
+        pywhatkit.sendwhatmsg("Enter your Friend or your number",message,time_hour=strTime,time_min=update) #Enter your friends number
     elif a==2:
         speak("Whats the message")
         message = str(input("Enter the message- "))
-        pywhatkit.sendwhatmsg("+917773908720",message,time_hour=strTime,time_min=update)
+        pywhatkit.sendwhatmsg("Enter your Friend or your number",message,time_hour=strTime,time_min=update) #Enter your friends number
